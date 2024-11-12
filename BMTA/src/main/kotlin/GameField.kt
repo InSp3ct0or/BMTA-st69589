@@ -29,7 +29,7 @@ class GameField(val rows: Int, val cols: Int) {
         return isValidPosition(position) && field[position.row][position.col] == Terrain.MEADOW
     }
 
-    private fun isValidPosition(position: Position): Boolean {
+     fun isValidPosition(position: Position): Boolean {
         return position.row in 0 until rows && position.col in 0 until cols
     }
 
