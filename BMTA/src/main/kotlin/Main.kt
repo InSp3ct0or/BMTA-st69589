@@ -3,9 +3,25 @@ fun main() {
     val cols = 20
     val numForest = 5
 
+    fun readHeroName(): String {
+        print("Enter the hero's name: ")
+        return readLine() ?: "Hero"
+    }
+
 
     val gameField = GameField(rows, cols)
-    val hero = Hero(10, 10)
+    val heroName = readHeroName()
+    val hero = Hero(
+        name = heroName,
+        position = Position(10, 10),
+        health = 100.0,
+        attack = 10.0,
+        defense = 5.0,
+        healing = 0.5
+    )
+
+
+
     val gamePlan = GamePlan(gameField, numForest)
 
     gamePlan.generate()
@@ -36,7 +52,6 @@ fun main() {
         gamePlan.map(hero)
         val command = readCommand()
 
-
         val direction = when (command) {
             "north" -> Direction.NORTH
             "south" -> Direction.SOUTH
@@ -49,9 +64,15 @@ fun main() {
             else -> null
         }
 
-
         direction?.let {
             gamePlan.moveHero(hero, it)
         }
+
+
+        hero.heroHealing()
     }
+
+
+
+
 }
