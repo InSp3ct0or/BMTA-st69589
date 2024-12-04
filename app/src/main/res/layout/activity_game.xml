@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <!-- Hero Name -->
+    <TextView
+        android:id="@+id/textHeroName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hero Name"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Hero Score -->
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textHeroName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Hero Health -->
+    <TextView
+        android:id="@+id/textHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health: 100"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Hero Attack -->
+    <TextView
+        android:id="@+id/textAttack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attack: 10"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textHealth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Hero Defense -->
+    <TextView
+        android:id="@+id/textDefense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Defense: 5"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textAttack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Hero Healing -->
+    <TextView
+        android:id="@+id/textHealing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Healing: 2"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textDefense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Hero Kills -->
+    <TextView
+        android:id="@+id/textKills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kills: 0"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textHealing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Hero Environment -->
+
+
+
+    <ImageView
+        android:id="@+id/imageSouthEast"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/se"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageEast" />
+
+
+    <ImageView
+        android:id="@+id/imageNorthEast"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="492dp"
+        android:layout_marginEnd="124dp"
+        android:src="@drawable/ne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageEast"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/e"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageCenter" />
+
+    <ImageView
+        android:id="@+id/imageWest"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/w"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageCenter" />
+
+    <ImageView
+        android:id="@+id/imageSouth"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/s"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageCenter" />
+
+    <ImageView
+        android:id="@+id/imageSouthWest"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/sw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageWest" />
+
+    <ImageView
+        android:id="@+id/imageNorth"
+        android:layout_width="39dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="488dp"
+        android:src="@drawable/n"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageNorthWest"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="492dp"
+        android:src="@drawable/nw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageCenter"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_center"
+        app:layout_constraintStart_toEndOf="@+id/imageSouthWest"
+        app:layout_constraintTop_toBottomOf="@id/imageNorth" />
+
+    <!-- Game Grid Layout -->
+    <GridLayout
+        android:id="@+id/gameGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="150dp"
+        android:rowCount="15"
+        android:columnCount="15"
+        app:layout_constraintTop_toBottomOf="@id/textKills"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!-- Пример ячейки для поля -->
+        <ImageView
+            android:id="@+id/imageMeadow"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:src="@drawable/ic_meadow" />
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
